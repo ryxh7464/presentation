@@ -46,7 +46,7 @@ class: inverse, center, middle
 
 class: center, middle
 
-# Does geographical location and characteristics have an effect internet quality of life in the UK and how has this changed over time?
+# Does geographical location and characteristics have an effect on internet quality of life in the UK and how has this changed over time?
 
 ---
 
@@ -104,12 +104,19 @@ class: inverse, center, middle
 We will be comparing February and August 2019
 
 ---
-# Initial Visualisation
-```{r viz, echo = FALSE, out.width = "60%", fig.align = "center"}
-include_graphics("img/initialviz.png")
+# Initial Visualisations - download speed by region
+```{r viz1, echo = FALSE, out.width = "90%", fig.align = "center"}
+include_graphics("img/regional_download_speed.png")
 ```
 ---
-# Statistics we belive will be useful
+
+# Initial Visualisations - download speed by regional income
+```{r viz2, echo = FALSE, out.width = "90%", fig.align = "center"}
+include_graphics("img/gdhi_download_speed.png")
+```
+---
+
+# Statistics we believe will be useful
 
 ---
 
