@@ -30,12 +30,13 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 
 ```{r load-data, include=FALSE}
 # Load your data here
-
+feb2019 <- read_csv("broadband_data_february_2019.csv")
+aug2019 <- read_csv("broadband_data_august_2019.csv")
 ```
 
 ```{r include=FALSE}
 style_xaringan(
-  title_slide_background_image = "img/confetti.jpg"
+  title_slide_background_image = "img/wallpaper2.jpg"
 )
 ```
 
@@ -64,57 +65,56 @@ https://www.data.gov.uk/dataset/dfe843da-06ca-4680-9ba0-fbb27319e402/uk-fixed-li
 
 ---
 
-class: center, middle
-
 # Data
-From: data.gov.uk
-Collected by: Ofcom’s research on the consumer experience
 
+ - From: data.gov.uk
 
+ - Collected by: Ofcom’s research on the consumer experience
+ 
 ---
+#February 2019 Data
 
-# xaringan
-
-- The presentation is created using the `xaringan` package
-
-- Use `---` to separate slides and `--` for incremental builds
-
---
-
-- Like this
-
----
-
-# Layouts
-
-You can use plain text
-
-- or bullet points
-
-.pull-left[
-or text in two columns $^*$
-]
-.pull-right[
-- like
-- this
-]
-
-.footnote[
-[*] And add footnotes
-]
-
----
-
-# Code
-
-```{r boring-analysis}
-# a boring analysis
-ave <- mean(cars$dist)
-print(ave)
+```{r glimpse feb}
+glimpse(feb2019)
 ```
 
 ---
+#August 2019 Data
 
+```{r glimpse aug}
+glimpse(aug2019)
+```
+
+---
+#Data - Columns
+
+```{r glimpse cols}
+colnames(feb2019)
+```
+
+---
+class: inverse, center, middle
+
+## Data Analysis Plan
+
+---
+# Variables we will use (for now)
+
+ - Region and Country 
+ - "Urban Rural"
+ - 24 Hour Average / Minimum / Maximum Download Speeds
+ - 24 Hour Average / Minimum / Maximum Upload Speeds
+ - Peak Speeds for the above (Peak Average Download, etc.)
+ - Netflix / iPlayer / Youtube 24 Hour Average Speeds - HD and SD
+
+---
+# Comparison Groups
+
+We will be comparing February and August 2019
+
+---
+background-image: url("/img/initialviz.png")
+---
 # Plots
 
 ```{r recode-species, echo = FALSE}
