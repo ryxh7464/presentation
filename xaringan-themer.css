@@ -95,7 +95,7 @@ h1, h2, h3 {
   font-size: var(--code-font-size);
 }
 .remark-inline-code {
-  font-size: var(--code-inline-font-size);
+  font-size: 60%;
   color: #000;
 }
 .remark-slide-number {
@@ -269,5 +269,8 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
     left: 0 !important;
   }
 }
+.remark-code, .remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
+                                    font-size: 90%;
+                                  }
 
 

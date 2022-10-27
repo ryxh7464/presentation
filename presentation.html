@@ -223,82 +223,6 @@ glimpse(aug2019)
 ```
 
 ---
-#Data - Columns
-
-
-```r
-colnames(feb2019)
-```
-
-```
-##  [1] "unit_id"                               
-##  [2] "Ofcom product"                         
-##  [3] "Region"                                
-##  [4] "Country"                               
-##  [5] "Urban Rural"                           
-##  [6] "Distance from Exchange band)"          
-##  [7] "Technology"                            
-##  [8] "Market Class"                          
-##  [9] "24 hr average download speed"          
-## [10] "24 hour average minimum speed download"
-## [11] "24 hour average maximum download speed"
-## [12] "Peak average download speed"           
-## [13] "Peak average minimum speed download"   
-## [14] "Peak average maximum download speed"   
-## [15] "24 hr average upload speed"            
-## [16] "24 hour average minimum speed upload"  
-## [17] "24 hour average maximum upload speed"  
-## [18] "Peak average upload speed"             
-## [19] "Peak average minimum speed upload"     
-## [20] "Peak average maximum upload speed"     
-## [21] "24 hour DNS Failure"                   
-## [22] "Peak DNS Failure"                      
-## [23] "24 hour DNS"                           
-## [24] "Peak DNS"                              
-## [25] "24 hour Jitter Upstream"               
-## [26] "Peak Jitter Upstream"                  
-## [27] "24 hour Jitter Downstream"             
-## [28] "Peak Jitter Downstream"                
-## [29] "24 hour Latency"                       
-## [30] "Peak Latency"                          
-## [31] "24 hour packet loss"                   
-## [32] "Peak packet loss"                      
-## [33] "24 hour time to load webpage"          
-## [34] "Peak time to load webpage"             
-## [35] "Disconnections"                        
-## [36] "24 hour - Youtube UHD"                 
-## [37] "24 hour - Youtube HD"                  
-## [38] "24 hour - Youtube SD"                  
-## [39] "24 hour - Youtube failure"             
-## [40] "24 hour - Youtube Start-up delay"      
-## [41] "Peak - Youtube UHD"                    
-## [42] "Peak - Youtube HD"                     
-## [43] "Peak - Youtube SD"                     
-## [44] "Peak - Youtube failure"                
-## [45] "Peak- Youtube Start-up delay"          
-## [46] "24 hour - Netflix UHD"                 
-## [47] "24 hour - Netflix HD"                  
-## [48] "24 hour - Netflix SD"                  
-## [49] "24 hour - Netflix failure"             
-## [50] "24 hour - Netflix Start-up delay"      
-## [51] "Peak - Netflix UHD"                    
-## [52] "Peak - Netflix HD"                     
-## [53] "Peak - Netflix SD"                     
-## [54] "Peak - Netflix failure"                
-## [55] "Peak- Netflix Start-up delay"          
-## [56] "24 hour - iPlayer UHD"                 
-## [57] "24 hour - iPlayer HD"                  
-## [58] "24 hour - iPlayer SD"                  
-## [59] "24 hour - iPlayer failure"             
-## [60] "24 hour - iPlayer Start-up delay"      
-## [61] "Peak - iPlayer UHD"                    
-## [62] "Peak - iPlayer HD"                     
-## [63] "Peak - iPlayer SD"                     
-## [64] "Peak - iPlayer failure"                
-## [65] "Peak- iPlayer Start-up delay"
-```
-
----
 class: inverse, center, middle
 
 ## Data Analysis Plan
@@ -319,135 +243,18 @@ class: inverse, center, middle
 We will be comparing February and August 2019
 
 ---
-background-image: url("/img/initialviz.png")
+# Initial Visualisation
+&lt;img src="img/initialviz.png" width="60%" style="display: block; margin: auto;" /&gt;
 ---
-# Plots
-
-
-
-&lt;img src="presentation_files/figure-html/plot-iris-1.png" width="80%" /&gt;
+# Statistics we belive will be useful
 
 ---
 
-## Plot and text
+class: inverse, center, middle
 
-.pull-left[
-- Some text
-- goes here
-]
-.pull-right[
-
-]
+## Thank You
 
 ---
-
-# Tables
-
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
-
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:right;"&gt; Sepal.Length &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Sepal.Width &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Petal.Length &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Petal.Width &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Species &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.9 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.4 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-
-# Images
-
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="https://images.unsplash.com/photo-1535448033526-c0e85c9e6968?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1650&amp;q=80" alt="Image credit: Photo by Jörg Angeli on Unsplash." width="60%" /&gt;
-&lt;p class="caption"&gt;Image credit: Photo by Jörg Angeli on Unsplash.&lt;/p&gt;
-&lt;/div&gt;
-
-Or you can also include a full page image. See next slide.
-
----
-
-background-image: url(https://images.unsplash.com/photo-1535448033526-c0e85c9e6968?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1650&amp;q=80)
-
----
-
-# Math Expressions
-
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. &amp;#36;\alpha+\beta$ renders `\(\alpha+\beta\)`. You can use the display style with double dollar signs:
-
-```
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-```
-
-`$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
-
-Limitations:
-
-1. The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
-
-1. There should not be spaces after the opening `$` or before the closing `$`.
-
-1. Math does not work on the title slide (see [#61](https://github.com/yihui/xaringan/issues/61) for a workaround).
-
----
-
-# Feeling adventurous?
-
-- Want to find out more about `xaringan`? See https://slides.yihui.name/xaringan/#1.
-
-- You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
-
-- But some of you might want to play around with slide styling. The 
-`xaringanthemer` provides some solutions for this that: https://pkg.garrickadenbuie.com/xaringanthemer.
-
-- And if you want more bells and whistles, there is also `xaringanExtra`: https://pkg.garrickadenbuie.com/xaringanExtra.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -455,8 +262,7 @@ Limitations:
 "ratio": "16:9",
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false,
-"yolo": true
+"countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
