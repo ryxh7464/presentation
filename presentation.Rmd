@@ -1,7 +1,7 @@
 ---
-title: "Presentation title"
-subtitle: "Presentation subtitle (if any)"
-author: "Team name <br> Names of team members"
+title: "IDS 2022 Project Proposal"
+subtitle: ""
+author: "Team Members - Zhihong Chen, Ryan Hall, Chenyi He, Eric Rogers, Eddie Washbrook"
 institute: "University of Edinburgh"
 date: "`r Sys.Date()`"
 output:
@@ -17,8 +17,8 @@ output:
 
 ```{r load-packages, include = FALSE}
 # Add any additional packages you need to this chunk
+library(xaringan)
 library(tidyverse)
-library(palmerpenguins)
 library(knitr)
 library(xaringanthemer)
 ```
@@ -30,6 +30,7 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 
 ```{r load-data, include=FALSE}
 # Load your data here
+
 ```
 
 ```{r include=FALSE}
@@ -38,29 +39,37 @@ style_xaringan(
 )
 ```
 
-class: center, middle
-
-## A statement of the overall goal / research question
-
----
-
 class: inverse, center, middle
 
-# Section title
+## Introduction
 
 ---
 
-# Hello World
+class: center, middle
 
-- Click the `Knit` button to compile your presentation
-
-- Make sure to commit and push all resulting files to your GitHub repo
+# Does geographical location and characteristics have an effect internet quality of life in the UK and how has this changed over time?
 
 ---
 
-class: inverse, middle, center
+# Our Datasets
 
-# Using xaringan
+We will be using the following:
+
+ - UK fixed line broadband performance Feb 2019
+
+ - UK fixed line broadband performance Aug 2019
+
+https://www.data.gov.uk/dataset/dfe843da-06ca-4680-9ba0-fbb27319e402/uk-fixed-line-broadband-performance
+
+
+---
+
+class: center, middle
+
+# Data
+From: data.gov.uk
+Collected by: Ofcom’s research on the consumer experience
+
 
 ---
 
@@ -136,9 +145,7 @@ ggplot(data = iris_modified, mapping = aes(x = Sepal.Width, y = Sepal.Length, co
 ```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
 # see how I changed out.width and fig.width from defaults
 # to make the figure bigger
-ggplot(penguins, aes(x = bill_length_mm, y = species, color = species)) +
-  geom_boxplot() +
-  theme_minimal()
+
 ```
 ]
 
