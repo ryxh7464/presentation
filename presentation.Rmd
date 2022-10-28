@@ -21,6 +21,7 @@ library(xaringan)
 library(tidyverse)
 library(knitr)
 library(xaringanthemer)
+library(dplyr)
 ```
 
 ```{r setup, include=FALSE}
@@ -119,6 +120,50 @@ include_graphics("img/gdhi_download_speed.png")
 ---
 
 # Statistics we believe will be useful
+
+```{r viz5, echo = FALSE, out.width = "90%", fig.align = "center"}
+feb_24_hr_average_download_speed <- feb2019 %>%
+  group_by(Region) %>%
+  summarise(feb_count = n(),
+            feb_min_ADS = min(`24 hr average download speed`),
+            feb_avg_ADS = mean(`24 hr average download speed`),
+            feb_max_ADS = max(`24 hr average download speed`),
+            feb_sd_ADS = sd(`24 hr average download speed`))
+
+aug_24_hr_average_download_speed <- aug2019 %>%
+  group_by(Region) %>%
+  summarise(aug_count = n(),
+            aug_min_ADS = min(`24 hr average download speed`),
+            aug_avg_ADS = mean(`24 hr average download speed`),
+            aug_max_ADS = max(`24 hr average download speed`),
+            aug_sd_ADS = sd(`24 hr average download speed`))
+
+both_avg_ADS <- left_join(feb_24_hr_average_download_speed,aug_24_hr_average_download_speed, by = "Region")%>%
+  select("Region", "feb_avg_ADS","aug_avg_ADS")
+both_avg_ADS$trend = ifelse(both_avg_ADS$feb_avg_ADS > both_avg_ADS$aug_avg_ADS, 'slow',
+                      ifelse(both_avg_ADS$feb_avg_ADS < both_avg_ADS$aug_avg_ADS, 'faster', 'None'))
+
+```
+
+ (February 2019)24 hour average download speed in different regions
+
+```{r feb}
+glimpse(feb_24_hr_average_download_speed)
+```
+
+---
+ (August 2019)24 hour average download speed in different regions
+```{r}
+glimpse(aug_24_hr_average_download_speed)
+```
+
+
+---
+Comparison between February and August
+```{r}
+glimpse(both_avg_ADS)
+```
+
 
 ---
 

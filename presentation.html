@@ -4,7 +4,7 @@
     <title>IDS 2022 Project Proposal</title>
     <meta charset="utf-8" />
     <meta name="author" content="Team Members - Zhihong Chen, Ryan Hall, Chenyi He, Eric Rogers, Eddie Washbrook" />
-    <meta name="date" content="2022-10-27" />
+    <meta name="date" content="2022-10-28" />
     <script src="libs/header-attrs-2.16/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
@@ -22,7 +22,7 @@ class: center, middle, inverse, title-slide
 ### University of Edinburgh
 ]
 .date[
-### 2022-10-27
+### 2022-10-28
 ]
 
 ---
@@ -254,6 +254,62 @@ We will be comparing February and August 2019
 ---
 
 # Statistics we believe will be useful
+
+
+
+ (February 2019)24 hour average download speed in different regions
+
+
+```r
+glimpse(feb_24_hr_average_download_speed)
+```
+
+```
+## Rows: 12
+## Columns: 6
+## $ Region      &lt;chr&gt; "East", "East Midlands", "London", "North East", "North We…
+## $ feb_count   &lt;int&gt; 239, 122, 100, 82, 196, 80, 237, 363, 237, 162, 129, 233
+## $ feb_min_ADS &lt;dbl&gt; 2.5632005, 1.5603613, 2.5356209, 1.2693377, 1.3678306, 1.0…
+## $ feb_avg_ADS &lt;dbl&gt; 73.17744, 66.70255, 64.62968, 66.78970, 64.88205, 74.16665…
+## $ feb_max_ADS &lt;dbl&gt; 381.7696, 362.5297, 353.8281, 365.9845, 381.5109, 375.5681…
+## $ feb_sd_ADS  &lt;dbl&gt; 81.80545, 68.89981, 52.01507, 70.64932, 67.05853, 84.83032…
+```
+
+---
+ (August 2019)24 hour average download speed in different regions
+
+```r
+glimpse(aug_24_hr_average_download_speed)
+```
+
+```
+## Rows: 12
+## Columns: 6
+## $ Region      &lt;chr&gt; "East", "East Midlands", "London", "North East", "North We…
+## $ aug_count   &lt;int&gt; 213, 112, 89, 77, 177, 77, 221, 317, 210, 154, 129, 213
+## $ aug_min_ADS &lt;dbl&gt; 2.3630934, 1.5612545, 2.0091396, 1.3173534, 1.3128544, 0.9…
+## $ aug_avg_ADS &lt;dbl&gt; 79.65890, 68.51310, 73.08881, 70.08040, 65.18862, 77.29061…
+## $ aug_max_ADS &lt;dbl&gt; 381.8753, 372.3460, 379.2787, 354.8521, 378.9786, 368.2645…
+## $ aug_sd_ADS  &lt;dbl&gt; 86.89956, 69.44166, 72.18438, 77.79060, 72.19510, 88.16579…
+```
+
+
+---
+Comparison between February and August
+
+```r
+glimpse(both_avg_ADS)
+```
+
+```
+## Rows: 12
+## Columns: 4
+## $ Region      &lt;chr&gt; "East", "East Midlands", "London", "North East", "North We…
+## $ feb_avg_ADS &lt;dbl&gt; 73.17744, 66.70255, 64.62968, 66.78970, 64.88205, 74.16665…
+## $ aug_avg_ADS &lt;dbl&gt; 79.65890, 68.51310, 73.08881, 70.08040, 65.18862, 77.29061…
+## $ trend       &lt;chr&gt; "faster", "faster", "faster", "faster", "faster", "faster"…
+```
+
 
 ---
 
