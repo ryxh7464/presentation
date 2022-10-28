@@ -150,7 +150,7 @@ both_avg_ADS$trend = ifelse(both_avg_ADS$feb_avg_ADS > both_avg_ADS$aug_avg_ADS,
 ```{r feb}
 glimpse(feb_24_hr_average_download_speed)
 ```
-
+Statistics: minimum number, maximum number, average number and standard deviation of 24 hour average download speed
 ---
  (August 2019)24 hour average download speed in different regions
 ```{r}
